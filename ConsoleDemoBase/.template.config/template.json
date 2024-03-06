@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Vu Truong",
+    "classifications": [
+        "Common",
+        "Console",
+        "POC"
+    ],
+    "identity": "ConsoleDemoBase",
+    "name": "Console App For POC Purpose",
+    "shortName": "console-poc",
+    "tags": {
+        "language": "C#",
+        "type": "solution"
+    },
+    "preferNameDirectory": true,
+    "sourceName": "ConsoleDemoBase",
+    "symbols": {
+        "skipRestore": {
+            "type": "parameter",
+            "datatype": "bool",
+            "description": "If specified, skips the automatic restore of the project on create.",
+            "defaultValue": "false"
+        }
+    },
+    "primaryOutputs": [
+        {
+            "path": "ConsoleDemoBase/ConsoleDemoBase.csproj"
+        }
+    ],
+    "sources": [
+        {
+            "modifiers": [
+            ]
+        }
+    ],
+    "postActions": [
+        {
+            "condition": "(!skipRestore)",
+            "description": "Restore NuGet packages required by this project.",
+            "manualInstructions": [
+                {
+                    "text": "Run 'dotnet restore'"
+                }
+            ],
+            "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+            "continueOnError": true
+        }
+    ]
+}
