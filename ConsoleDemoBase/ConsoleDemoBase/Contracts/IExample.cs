@@ -1,5 +1,7 @@
 ﻿namespace ConsoleDemoBase.Contracts;
 public interface IExample
 {
-    static abstract void Execute();
+    void Execute() => ExecuteAsync().Wait();
+
+    Task ExecuteAsync(CancellationToken cancellationToken = default);
 }
