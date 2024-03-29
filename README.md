@@ -11,4 +11,6 @@
 
 Run this cmd inside folder contains solution file
 
+```
 dotnet new install ./
+```
